@@ -1,0 +1,120 @@
+<div class="col-md-9 row-fluid">
+	<div class="row title-page">
+		<div class="col-md-1">
+			<a type="button" href="/#/accounts/biometric/{{account_id}}/transactions"
+				class="btn btn-large button_mfm"><span
+				class="glyphicon glyphicon-chevron-left"></span></a>
+		</div>
+		Cuentas biom&eacute;tricas - Detalle Movimiento {{detailmov}}
+	</div>
+	<div class="well">
+		<div class="">
+			<div class="row ">
+				<div class="col-md-6">
+					<div class ="row">
+						<div class="col-md-5">
+							<span class="text pull-right">Cuenta de Retiro</span>
+						</div>
+						<div class="col-md-6">
+							<input readonly ng-model="detail.accountFrom"/>
+						</div>
+						<div class="col-md-1">
+							<span>MXN</span>
+						</div>
+					</div>
+
+					<div class ="row">
+						<div class="col-md-5">
+							<span class="text pull-right">Cuenta de Dep&oacute;sito</span>
+						</div>
+						<div class="col-md-6">
+							<input readonly ng-model="detail.accountTo"/>
+						</div>
+						<div class="col-md-1">
+							<span>MXN</span>
+						</div>
+					</div>
+
+					<div class ="row">
+						<div class="col-md-5">
+							<span class="text pull-right" >Beneficiario</span>
+						</div>
+						<div class="col-md-6">
+							<input readonly ng-model="detail.beneficiary"/>
+						</div>
+					</div>
+
+					<div class ="row">
+						<div class="col-md-5">
+							<span class="text pull-right">RFC</span>
+						</div>
+						<div class="col-md-6">
+							<input	readonly ng-model="detail.rfc"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-5">
+							<span class="text pull-right">Importe</span>
+						</div>
+						<div class="col-md-5">
+							<input readonly ng-model="detail.amount"/>
+						</div>
+						<div class="col-md-2">
+							<span>MXN</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5">
+							<span class="text pull-right">Fecha</span>
+						</div>
+						<div class="col-md-6">
+							<input readonly ng-model="detail.date" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5">
+							<span class="text pull-right">Referencia</span>
+						</div>
+						<div class="col-md-6">
+							<input readonly ng-model="detail.reference"/>
+						</div>
+					</div>
+					<!-- empty row -->
+					<div class="row">
+						<div class="col-md-5">
+						</div>
+						<div class="col-md-6">
+						</div>
+					</div>
+				</div>
+			</div><br />
+			<div class="row pull-right" style="">
+				<span class="text" >Enviar a&nbsp;&nbsp;</span>
+				<select ngModel="string" name="string" required	ngRequired="string" ngOptions="comprehension_expression">
+				<option selected>amigo@mail.com</option>
+				<option>otro</option>
+				</select>
+			</div>
+			<br />
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div  class="col-md-3 pull-left" align="left">
+			<button type="button" class="btn btn-default btn-large button_mfm btn-block"> <span class="glyphicon glyphicon-download-alt">Descargar</span></button>
+			
+		</div>
+		<div class="col-md-3">
+			
+			<button type="button" class="btn btn-default btn-large button_mfm btn-block"> <span class="glyphicon  glyphicon-print">Imprimir</span></button>
+			
+			</div>
+		<div class="col-md-3  pull-right" align="right">
+
+    	<button type="button" class="btn btn-default btn-large button_mfm btn-block"> <span class="glyphicon glyphicon-arrow-right">Enviar</span></button>
+  		</div>
+  </div>
+</div>
+
+

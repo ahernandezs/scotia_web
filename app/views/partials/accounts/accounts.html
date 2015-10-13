@@ -1,0 +1,31 @@
+<div class="col-md-3">
+	<div class="left-menu">
+		<h2 class="title-green">Tarjetas</h2>
+		<ul class="menu">
+		    <li class="active">Tarj. Titular <sup>***</sup>000</li>
+		    <li>Tarj. Adicional <sup>***</sup>123</li>
+		    <li>Tarj. Adicional <sup>***</sup>789</li>
+		</ul>
+	</div>
+</div>
+
+<div class="col-md-9" ng-show="requestStack.length > 0 && showBGLoader === undefined">
+	<div class="loading"></div>
+</div>
+
+<div class="col-md-9" ng-hide="requestStack.length > 0">
+	<div>
+		<alert type="danger" class="alert ng-isolate-scope alert-danger alert-dismissible" ng-show="danger.show" close="danger.show = false">
+			{{danger.message}}
+		</alert>
+		<alert type="warning" class="alert ng-isolate-scope alert-warning alert-dismissible" ng-show="warning.show" close="warning.show = false">
+			{{warning.message}}
+		</alert>
+	</div>
+	<div ng-include="'views/partials/cards/titular.html'"></div>
+	<!--div ng-include="'views/partials/accounts/notifications.html'" ng-hide="hideNotifications"></div>
+	<div ui-view='detailSaving' class="account-page"></div>
+	<div ui-view='detailInvestment' class="account-page"></div>
+	<div ui-view='detailLoan' class="account-page"></div>
+	<div ui-view='detailCredit' class="account-page"></div-->
+</div>

@@ -1,0 +1,305 @@
+//MODULES
+@import "sass/varmixins";
+@import "sass/keyframes";
+@import "sass/buttons";
+@import "sass/alerts";
+@import "sass/datepicker";
+@import "sass/others";
+@import "sass/header";
+@import "sass/footer";
+@import "sass/login";
+@import "sass/cards";
+@import "sass/signup";
+@import "sass/responsive";
+
+*{
+	behavior: url(PIE.htc);
+}
+body, html, #mainDiv {
+	height: 100%;
+	font-size:1em;
+	background:$bg-color;
+	color:$default-color;
+	font-family: Arial, sans-serif,"Helvetica Neue", "HelveticaNeue", "Helvetica";
+}
+// b,strong{
+//     font-family: AvenirB;
+// }
+// html{
+
+// }
+body{
+	background: #fafafa;
+}
+input{
+	-moz-box-shadow: none!important;
+	-webkit-box-shadow: none!important;
+	box-shadow: none!important;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="mail"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus{
+	border: 1px solid #d81e05;
+}
+
+
+
+
+.content{
+	> .container{
+		background:white;
+		padding: 160px 0 50px;
+	}
+	.left-menu{
+		padding-left: 15px;
+		ul.menu{
+			list-style: none;
+			background: white;
+			padding: 0;
+			overflow: hidden;
+			border: 1px solid #cccccc;
+			@include border_radius(4px);
+			li{
+				cursor: pointer;
+				padding: 16px 10px;
+				font-size: 1em;
+				color:#606060;
+				border-bottom:1px solid #cccccc;
+				@include anim_transicion_ease(0.3s);
+				&:last-child{
+					border:none;
+				}
+				&:hover, &.active{
+					font-weight: bold;
+					background:#f5f5f5;
+				}
+			}
+		}
+	}
+	.box-notifications{
+		overflow: hidden;
+		background: #FFFFFF;
+		border: 1px solid #dcdcdc;
+		@include border_radius(5px);
+		.row{
+			border-bottom: 1px solid #dcdcdc;
+			.cell{
+				width: 100%;
+				min-height: 55px;
+				font-size: 12px;
+				padding: 10px 5px;
+				.logo{
+					margin: 0 auto;
+				}
+				p{
+					margin: 0;
+					color: #727272;
+					span{
+						color: #282828;
+						font-weight: bold;
+					}
+				}
+				.btn{
+					min-width: 120px;
+					margin-top: 5px;
+				}
+			}
+		}
+		.row:last-child{
+			border-bottom: none;
+		}
+	}
+	.title-account{
+		color: #009b4d;
+		font-size: 22px;
+		border-bottom: 1px solid #c2c2c2;
+		padding-bottom: 10px;
+		span{
+			color: #999999;
+			font-size: 18px;
+			font-weight: normal;
+			display: inline-block;
+			margin-right: 30px;
+		}
+	}
+	.table-striped{
+		background: #FFFFFF;
+		font-size: 12px;
+		color: #666666;
+		thead{
+			border-top: 1px solid #b7b7b7;
+			td{
+				background: #f1f1f1;
+				color: #282828;
+
+			}
+		}
+		tbody{
+			tr:first-child{
+				td{
+					border-top: 1px solid #b7b7b7;
+				}
+			}
+			tr:nth-child(odd){
+				td{
+					background: #fafafa;
+				}
+			}
+			tr:nth-child(even){
+				td{
+					background: #FFFFFF;
+				}
+			}
+		}
+		.negativo{
+			color: #fe7575;
+		}
+	}
+	.account-page{
+		.detalles{
+			margin-bottom: 20px;
+			.content-logo{
+				background: #FFFFFF;
+				@include border_radius(3px);
+				.logo{
+					margin: 20px auto;
+				}
+			}
+			.saldos-cuenta{
+				background: #ffcf17;
+				height: 30px;
+				color: #FFFFFF;
+				margin-bottom: 10px;
+				overflow: hidden;
+				@include border_radius(3px);
+				.text{
+					background: #86bd4a url("../images/detail-divider.png") right center no-repeat;
+					background-size: contain;
+					display: block;
+					float: left;
+					padding: 5px 50px 5px 10px;
+				}
+				.amount{
+					display: block;
+					float: right;
+					padding: 5px 10px;
+				}
+			}
+			.pagos-prestamo{
+				background: #86bd4a;
+				clear: both;
+				overflow: hidden;
+				margin-bottom: 10px;
+				padding: 10px;
+				@include border_radius(3px);
+				p{
+					color: #FFFFFF;
+					font-size: 12px;
+					padding: 0;
+					margin-bottom: 0px;
+				}
+				p.title{
+					font-size: 14px;
+					margin-bottom: 3px;
+				}
+				.btn{
+					margin-top: 5px;
+					margin-bottom: 0;
+				}
+			}
+		}
+		.tablas-detalle{
+			margin-bottom: 20px;
+			table{
+				width: 100%;
+				tr{
+					border-bottom: 1px solid #d2d2d2;
+					td{
+						color: #747474;
+						font-size: 12px;
+						padding: 1px 5px;
+					}
+					td:last-child{
+						text-align: right;
+					}
+				}
+				tr:last-child{
+					border-bottom: none;
+				}
+
+			}
+		}
+		.input-search{
+			background: #FFFFFF url("../images/ico-search.png") 8px 7px no-repeat;
+			background-size: 15px;
+			margin-bottom: 10px;
+			padding-left: 30px;
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+		.filtro{
+			font-size: 12px;
+			color: #6e6e6e;
+			p.label{
+				float: left;
+				font-size: 12px;
+				color: #747474;
+				font-weight: normal;
+				padding-top: 8px;
+				padding-right: 15px;
+			}
+			.btn-group{
+				min-width: 150px;
+				.btn-default{
+					color: #009b4d;
+				}
+				.btn{
+					width: 50%;
+					font-size: 11px!important;
+				}
+				.btn:first-child{
+					@include border_right_radius(0);
+				}
+				.btn:last-child{
+					@include border_left_radius(0);
+				}
+				.btn-success:last-child{
+					border-left: 1px solid #FFFFFF;
+				}
+				.date{
+					width: 49%;
+					font-size: 11px!important;
+					text-align: center;
+				}
+			}
+			.input-group{
+				min-width: 150px;
+				max-width: 200px;
+				border: 1px solid #369443;
+				overflow: hidden;
+				@include border_radius(5px);
+				margin-bottom: 10px;
+				input{
+					width: 50%;
+					text-align: center;
+					border: none;
+					color: #369443;
+					padding: 9px 0;
+					font-size: 11px;
+				}
+				input:first-child{
+					border-right: 1px solid #369443
+				}
+				.ui-datepicker-trigger{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+
+

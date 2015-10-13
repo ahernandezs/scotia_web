@@ -1,0 +1,57 @@
+/************** BUTTONS **************/
+.button_mfm{
+	@include border_radius(5px)	;
+	border: 2px solid #FFFFFF;
+	background: transparent;
+	color: #FFFFFF;
+	@include anim_transicion_ease(0.5s);
+	&:hover, &:focus, &:active{
+		background: #FFFFFF;
+		color: #000000;
+	}
+}
+.btn{
+	font-size: 1.2em;
+	padding: 12px 0;
+	margin-bottom: 10px;
+	@include border_radius(4px);
+	@include anim_transicion_ease(0.3s);
+
+	&.btn-default{
+		color:$red;
+		font-size: 0.9em;
+		background: #FFFFFF;
+		border: 1px solid $red !important;
+		&:hover, &:focus, &:active{
+			background: #FFFFFF;
+		}
+	}
+}
+
+.btn-success{
+	background: $dred;
+	width: 100%;
+	border: 1px solid #cccccc !important;
+	&:hover, &:focus, &:active{
+		background: $red;
+	}
+	&[disabled]{
+		background: #b5121b;
+	}
+}
+.btn-danger{
+	background: #e90636;
+	width: 100%;
+	border: none;
+	&:hover, &:focus, &:active{
+		background: #ff0000;
+	}
+}
+.btn-warning{
+	background: #e4a612;
+	width: 100%;
+	border: none;
+	&:hover, &:focus, &:active{
+		background: #f5cd21;
+	}
+}

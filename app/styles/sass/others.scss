@@ -1,0 +1,76 @@
+/* MARGINS */
+.margin0{
+	margin: 0!important;
+}
+/************** ICONS **************/
+.ico-check{
+	background: url("../images/ico-check.png") no-repeat;
+	background-size: contain;
+	width: 30px;
+	height: 30px;
+	display: block;
+}
+/************** COMPONENTES ANGULAR **************/
+.gridStyle {
+	overflow: hidden;
+	.ngVerticalBar{
+		display: none;
+	}
+	.ngHeaderScroller{
+		background: #3d3d3d;
+		color: #FFFFFF;
+		font-size: 12px;
+		font-weight: bold;
+	}
+	.ngRow{
+		font-size: 12px;
+	}
+	.ngRow.even{
+		background: #d1d3d4;
+	}
+	.ngRow.odd{
+		background: #FFFFFF;
+	}
+}
+
+.angular-google-map-container{
+	position: fixed!important;
+	width: 100%;
+	top: 76px;
+	bottom: 120px;
+	left: 0;
+	right: 0;
+	z-index: 999;
+}
+
+/* TITLES */
+.title-green{
+	color: #d81e05;
+	font-size: 1.8em;
+	margin-bottom: 20px;
+}
+/* LOGOS */
+.logo-inversion{
+	background: url("../images/cta-inversion.png") no-repeat;
+	background-size: contain;
+	width: 119px;
+	height: 36px;
+}
+.logo-presta-plus{
+	background: url("../images/cta-presta-plus.png") no-repeat;
+	background-size: contain;
+	width: 83px;
+	height: 37px;
+}
+.logo-credi-donde{
+	background: url("../images/cta-credi-donde.png") no-repeat;
+	background-size: contain;
+	width: 79px;
+	height: 40px;
+}
+.logo-alcancia{
+	background: url("../images/cta-alcancia.png") no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 36px;
+}

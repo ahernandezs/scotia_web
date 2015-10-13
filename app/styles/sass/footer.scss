@@ -1,0 +1,50 @@
+.icon-row{
+		padding:20px;
+		border-bottom:1px solid #959595;
+		a{
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			margin-right: 10px;
+			&.ico-facebook{
+				background:url("../images/ico-facebook.png") no-repeat center center;
+				background-size:25px;
+			}
+			&.ico-twitter{
+				background:url("../images/ico-twitter.png") no-repeat center center;
+				background-size:25px;
+			}
+			&.ico-youtube{
+				background:url("../images/ico-youtube.png") no-repeat center center;
+				background-size:25px;
+			}
+			&.ico-linkedin{
+				background:url("../images/ico-linkedin.png") no-repeat center center;
+				background-size:25px;
+			}
+			&.ico-ipab{
+				width: 40px;
+				background:url("../images/ico-ipab.png") no-repeat center center;
+				background-size:auto 25px;
+			}
+			&.ico-trusteer{
+				width: 70px;
+				background:url("../images/ico-trusteer.png") no-repeat center center;
+				background-size:auto 25px;
+			}&.ico-buro{
+				background:url("../images/ico-buro.png") no-repeat center center;
+				background-size:25px;
+			}
+		}
+	}
+	.footer-links{
+		padding:20px;
+		p{
+			color:#606060;
+			font-size: 0.8em;
+			a, a:hover{
+				text-decoration: none;
+				color:#606060;
+			}
+		}
+	}

@@ -1,0 +1,65 @@
+<div class="col-md-9">
+  <div class="row">
+      <div class="col-md-1">
+        <a type="button" ng-click="back()" class="btn btn-large button_mfm"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      </div>
+      <span style="color:#FFFFFF;"><font size="5">L&iacute;nea de Cr&eacute;dito - Detalle de la Operaci&oacute;n</font></span>
+    </div>
+    <br>
+
+  <div class="row">
+    <div class="col-md-12">
+    <div class="well">
+    <div class="col-md-6">
+              Operaci&oacute;n #{{operacion}}
+    </div>
+
+    <div class="col-md-6 " style="background-color:#0000FF; color:white">
+<h3>Pactada</h3>
+</div>
+<br></br><br></br>
+
+    <div class="row">
+      <div class="row">
+          <div class="col-md-6">
+            <div class="col-md-6"> No operaci&oacute;n  </div> <div class="col-md-6"> <input disabled="disabled" ng-model="balance.operation_number"  type="text"/></div>
+            <div class="col-md-6"> Monto a enviar </div> <div class="col-md-6"><input type="text"  ng-model="balance.mount_to_send"   disabled="disabled"  size="20"/></div>
+            <div class="col-md-6">  Monto a cobrar   </div> <div class="col-md-6"><input type="text"  ng-model="balance.mount_to_cash"  disabled="disabled"   size="20"/></div>
+             <div class="col-md-6"> Fecha de operaci&oacute;n  </div> <div class="col-md-6"><input type="text"  ng-model="balance.operation_date"   disabled="disabled"   size="20"/></div>
+          </div>
+          <div class="col-md-6">
+            <div class="col-md-6">Fecha valor  </div> <div class="col-md-6"><input type="text" ng-model="balance.value_date"   disabled="disabled"  size="20"/></div>
+            <div class="col-md-6">Fecha Vencimiento  </div> <div class="col-md-6"><input type="text" ng-model="balance.due_date"   disabled="disabled"    size="20"/></div>
+            <div class="col-md-6">Plazo  </div> <div class="col-md-6"> <input type="text" ng-model="balance.deadline"  disabled="disabled"   size="20"/></div>
+            <div class="col-md-6">T.C. Pactado  </div> <div class="col-md-6"> <input type="text" ng-model="balance.tc"    disabled="disabled"    size="20"/></div>
+            <div class="col-md-6">Producto      </div> <div class="col-md-6"> <input type="text"    ng-model="balance.product" disabled="disabled" size="20"/></div>
+          </div>
+      </div>
+   </div>
+
+   <span class="text">Beneficiarios
+      <div>
+          <div class="gridStyle" ng-grid="gridOptions"></div>
+      </div>
+   </span>
+   <div class="row">
+   <div class="col-md-6">Autoriza:
+        <select ng-model="authorized" ng-options="m.name for m in authorized">
+          <option value="">Authorizer</option>
+        </select>
+    </div>
+    <div class="col-md-6">M&eacute;todo:
+      <select ng-model="metodo" ng-options="m.name for m in metodo">
+        <option value=""> 554343434</option>
+      </select>
+    </div>
+    </div>
+
+ </div><!-- end well-->
+<div class="row">
+     <div><button type="button" class="btn btn-large button_mfm pull-right"> Autorizar </button></div>
+   </div><!-- end button-->
+</div><!-- end col-md-12-->
+</div>
+</div>
+

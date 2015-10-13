@@ -1,0 +1,45 @@
+<div class="col-md-9">
+  <div class="row">
+    <div class="col-md-1">
+      <a type="button" href="/#/accounts" class="btn btn-large button_mfm"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    </div>
+    <span style="color: #FFFFFF;"><font size="5">Inversiones</font></span>
+  </div>
+
+  <div class="col-md-12 notificaciones">
+    <div class="well">
+          <div class="row">
+              <div class="col-md-3 pull-right">
+                  Divisa <select ng-model="tipoDivisa" ng-options="c.name for c in moneda"></select>              
+              </div>            
+          </div>
+    <div> Total Global Pesos (MXN)  {{mxn.global}} Capital Total ${{mxn.capTotal}}</div>
+
+
+        <div class="row">
+          <div class="col-md-3">
+            Inter&eacute;s Generado
+            <p>{{invertions.interesGenerado}}</p>
+          </div>
+          <div class="col-md-2">
+            Inter&eacute;s Retirado
+            <p>{{invertions.interesRetirado}}</p>
+          </div>
+          <div class="col-md-4">
+            Inter&eacute;s Generado No Retirado
+            <p>{{invertions.interesGeneadoNoRetirado}}</p>
+          </div>
+          <div class="col-md-3">
+            Inter&eacute;s Por Generar
+            <p>{{invertions.InteresPorGenerar}}</p>
+          </div>
+        </div>
+
+        Inversiones Pesos
+         <div class="table-responsive">
+           <div class="gridStyle" ng-grid="gridOptions" with="200%"></div>
+         </div>
+    </div>
+  </div>
+  <!-- end table mxn!-->
+</div>

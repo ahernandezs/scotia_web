@@ -1,0 +1,125 @@
+<!--div class="login_back"><div-->
+<div class="login_content">
+	<div class="login_header container">
+			<div class="row">
+				<p class="col-md-7"><a href="#/" class="logo"></a></p>
+				<p class="col-md-3 text-right"><a href="#/map">Preguntas frecuentes</a></p>
+				<p class="col-md-2 text-center"><a href="#/map">Cont&aacute;ctanos</a></p>
+			</div>
+	</div>
+	<div class="container login_back" ng-controller="LoginCtrl">
+		<div class="row" ng-show="CheckLogin">
+			<div class="col-md-6">
+				<form class="form-signin" name="login1">
+					<h2>Ingresar a Scotiabank Tarjetas</h2>
+					<p>Ingresa tu número de usuario para acceder.</p>
+					<input type="text" class="form-control input_user" placeholder="N&uacute;mero de usuario"  ng-model="auth.user_login" ng-required="true" autofocus ng-minlength="5" maxlength="12" onkeypress="return validate(event)">
+					<div>
+						<alert type="danger" class="alert ng-isolate-scope alert-danger alert-dismissible" ng-show="danger.show" close="danger.show = false">
+							{{danger.message}}
+						</alert>
+						<alert type="warning" class="alert ng-isolate-scope alert-warning alert-dismissible" ng-show="warning.show" close="warning.show = false">
+							{{warning.message}}
+						</alert>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<button class="btn btn-success" ng-click="checkLogin();" ng-disabled="login1.$invalid || logining">Continuar</button>
+						</div>
+					</div>
+					<div class="row">
+						<p class="text-center"><a href="javascript:void(0);" ng-click="password();">&iquest;Olvidaste tu n&uacute;mero de usuario?</a></p>
+						<p class="text-center"><a href="#/contact">Reg&iacute;strate aqu&iacute;</a></p>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<alert type="success" ng-bind-html="invite.message" class="success ng-isolate-scope alert-warning alert-dismissible" ng-show="invite.show" close="invite.show = false"></alert>
+
+		<div class="row" ng-hide="CheckLogin">
+
+			<div class="col-md-8 col-md-offset-2">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h1>Acceso a Fundaci&oacute;n Dond&eacute; Banco</h1>
+						Por tu seguridad, comprueba que la imagen que se muestra a continuaci&oacute;n y el saludo corresponde con lo que seleccionaste en tu acceso a Fundaci&oacute;n Dond&eacute; Banco
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<form name="login2">
+								<div class="col-md-6 col-md-offset-3">
+									<h2 class="text-center">{{auth.response.anti_phishing_statement}}</h2>
+									<div class="user">
+										<img alt="..." ng-src="data:image/png;base64,{{auth.response.image_content}}" class="img-thumbnail">
+									</div>
+									<div ng-show="auth.response.new_condition_action === 'Y'">
+										<label class="checkbox">
+											<input type="checkbox" ng-model="auth.new_condition_action" ng-required="auth.response.new_condition_action === 'Y'">
+											Acepto <a href="javascript:void(0);">T&eacute;rminos y Condiciones de Uso</a>,<br>Fundaci&oacute;n Dond&eacute; Banco
+										</label>
+									</div>
+									<div>
+										<alert type="danger" class="alert ng-isolate-scope alert-danger alert-dismissible" ng-show="danger.show" close="danger.show = false">
+											{{danger.message}}
+										</alert>
+										<alert type="warning" class="alert ng-isolate-scope alert-warning alert-dismissible" ng-show="warning.show" close="warning.show = false">
+											{{warning.message}}
+										</alert>
+									</div>
+									<input type="password" class="form-control" placeholder="Ingresa tu contrase&ntilde;a" ng-model="auth.password" ng-required="true" autofocus ng-minlength="8" maxlength="12" onkeypress="return validate(event)">
+									<button class="btn btn-success form-control" ng-click="login()" ng-disabled="login2.$invalid || logining">Acceder</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="panel-footer text-center">
+						Si los datos no coinciden comun&iacute;cate a nuestro centro de atenci&oacute;n telef&oacute;nica: <a href="tel: 018003663386">01 800 3663386</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="download-app pull-right">
+			<a href="#/" class="ico-ios"></a>
+			<a href="#/" class="ico-android"></a>
+			<a href="#/" class="ico-bb"></a>
+			<a href="#/" class="ico-wp"></a>
+		</div>
+		<div class="login_footer">
+			<div class="container">
+				<div class="row">
+					<p class="col-md-2 text-center"><a href="#/contacto"><i class="ico-contacto"></i>Contacto</a></p>
+					<p class="col-md-2 text-center"><a href="#/contacto"><i class="ico-aclaraciones"></i>Aclaraciones</a></p>
+					<p class="col-md-2 text-center"><a href="#/contacto"><i class="ico-sucursales"></i>Sucursales</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container icon-row">
+		<div class="row">
+			<a href="#/" class="ico-facebook"></a>
+			<a href="#/" class="ico-twitter"></a>
+			<a href="#/" class="ico-youtube"></a>
+			<a href="#/" class="ico-linkedin"></a>
+			<a href="#/" class="ico-ipab"></a>
+			<a href="#/" class="ico-trusteer"></a>
+			<a href="#/" class="ico-buro"></a>
+		</div>
+	</div>
+	<div class="container footer-links">
+		<div class="row">
+			<p class="col-md-10">
+				<a href="#/">Seguridad</a>  |  
+				<a href="#/">Aviso de Privacidad</a>  |  
+				<a href="#/">FATCA</a>  |  
+				<a href="#/">Términos y condiciones</a>  |  
+				<a href="#/">Ley de Transparencia</a>  |  
+				<a href="#/">Banca y Mercados Globales</a>  |  
+				<a href="#/">Condusef</a>
+			</p>
+			<p class="col-md-2 text-right">© 2015 Scotiabank</p>
+		</div>
+	</div>
+</div>

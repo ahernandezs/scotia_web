@@ -1,0 +1,118 @@
+<div class="col-md-9">
+  <div class="row">
+    
+      <div class="col-md-1">
+        <a type="button" href="/#/transfer" class="btn btn-large button_mfm"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      </div>
+      <span style="color:#FFFFFF;"><font size="5">Pago Mismo Banco</font></span>
+    
+    <br></br>
+<div class="col-md-12">
+	<div class="well">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+
+				</div>
+			</div><!--end col-md-6-->
+			<div class="col-md-3">
+				B&uacute;squeda de Cuenta
+			</div>	
+			<div class="col-md-3">
+				<input value="{{same.searchAccount}}" disabled></input>
+			</div>
+		</div><!--end row 1-->
+		<div class="row">
+			<div class="col-md-3">
+				Cuenta de Retiro
+			</div>
+			<div class="col-md-3">
+				<input value="{{same.accountRemoval}}" disabled></input>
+			</div>
+			<div class="col-md-3">
+				Cuenta de Dep&oacute;sito
+			</div>
+			<div class="col-md-3">
+				<select>
+					<option>{{same.accountDeposit}}</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				Alias
+			</div>
+			<div class="col-md-3">
+				<select name="" id="">
+     					<option value="">Alias Cuenta</option>
+     					<option value="">Segundo Alias</option>
+    			</select>
+			</div>
+			<div class="col-md-3">
+				Alias
+			</div>
+			<div class="col-md-3">
+				<select name="" id="">
+     					<option value="">Alias Cuenta</option>
+    					<option value="">Segundo Alias</option>
+    			</select>
+			</div>
+		</div>
+		<div class="row">
+				<div class="col-md-3">
+					Divisa
+				</div>
+				<div class="col-md-3">
+					<input value="{{same.coin}}" disabled></input>							
+				</div>
+		<div class="row">
+			<div class="col-md-3">
+				Divisa
+			</div>
+			<div class="col-md-3">
+				<input value="{{same.coin}}" disabled></input>
+			</div>
+		</div>
+		<hr>			
+			<div class="row">
+			<div class="col-md-3">
+				Importe
+			</div>
+			<div class="col-md-3">
+
+				<input value="{{same.import | currency:same.currencySymbol}}" disabled></input>
+			</div>
+			<div class="col-md-3">
+				Concepto de Pago
+			</div>
+			<div class="col-md-3">
+				<input value="{{same.paymentConcept}}" disabled></input>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				Fecha de Aplicaci&oacute;n
+			</div>
+			<div class="col-md-3">
+				<input value="{{same.dateApply}}" disabled></input>
+			</div>
+			<div class="col-md-3">
+				Referencia Num&eacute;rica
+			</div>
+			<div class="col-md-3">
+				<input value="{{same.numberReference}}" disabled></input>
+			</div>
+		</div>
+		</div><!-- end second row-->
+	</div><!-- end well-->
+		<div class="row">
+			<div class="col-md-3">
+				<a type="button" href="/#/transfer/sameAddBeneficiary" class="btn btn-large button_mfm">Agregar Beneficiario</a>
+			</div>
+			<div class="col-md-3 pull-right">
+				<a type="button" href="/#/transfer/same-bank-transfer-confirmation" class="btn btn-large button_mfm">Aceptar</a>
+			</div>
+		</div>
+</div><!-- end col-md-12-->
+</div><!-- end row-->
+</div><!-- end col-md-9-->

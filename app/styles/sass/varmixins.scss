@@ -1,0 +1,98 @@
+/*$icon-font-path: "/bower_components/sass-bootstrap/fonts/";*/
+/*@import 'sass-bootstrap/lib/bootstrap';*/
+
+/* VARIABLES */
+$logo_bg: "../images/logo.png";
+$default-color: #606060;
+$bg-color:#e8e6de;
+
+$red:#d81e05;
+$dred:#b5121b;
+
+$lgray:#f5f5f5;
+$mgray:#999999;
+$gray:#cccccc;
+
+/* MIXINS */
+@mixin border_radius($radius: 10px) {
+	border-radius: $radius !important;
+	-webkit-border-radius: $radius !important;
+	-moz-border-radius: $radius !important;
+}
+@mixin border_top_radius($radius: 10px) {
+	border-top-left-radius: $radius !important;
+	-webkit-border-top-left-radius: $radius !important;
+	-moz-border-top-left-radius: $radius !important;
+	border-top-right-radius: $radius !important;
+	-webkit-border-top-right-radius: $radius !important;
+	-moz-border-top-right-radius: $radius !important;
+}
+@mixin border_bottom_radius($radius: 10px) {
+	border-bottom-left-radius: $radius !important;
+	-webkit-border-bottom-left-radius: $radius !important;
+	-moz-border-bottom-left-radius: $radius !important;
+	border-bottom-right-radius: $radius !important;
+	-webkit-border-bottom-right-radius: $radius !important;
+	-moz-border-bottom-right-radius: $radius !important;
+}
+@mixin border_left_radius($radius: 10px) {
+	border-top-left-radius: $radius !important;
+	-webkit-border-top-left-radius: $radius !important;
+	-moz-border-top-left-radius: $radius !important;
+	border-bottom-left-radius: $radius !important;
+	-webkit-border-bottom-left-radius: $radius !important;
+	-moz-border-bottom-left-radius: $radius !important;
+}
+@mixin border_right_radius($radius: 10px) {
+	border-top-right-radius: $radius !important;
+	-webkit-border-top-right-radius: $radius !important;
+	-moz-border-top-right-radius: $radius !important;
+	border-bottom-right-radius: $radius !important;
+	-webkit-border-bottom-right-radius: $radius !important;
+	-moz-border-bottom-right-radius: $radius !important;
+}
+
+@mixin gradient_top_bottom($color_top: #ffffff, $color_bottom: #000000) {
+	background: $color_top !important;
+	background: -moz-linear-gradient(top, $color_top 0%, $color_bottom 100%) !important;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color_top), color-stop(100%,$color_bottom)) !important;
+	background: -webkit-linear-gradient(top, $color_top 0%,$color_bottom 100%) !important;
+	background: -o-linear-gradient(top, $color_top 0%,$color_bottom 100%) !important;
+	background: -ms-linear-gradient(top, $color_top 0%,$color_bottom 100%) !important;
+	background: linear-gradient(to bottom, $color_top 0%,$color_bottom 100%) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color_top, endColorstr=$color_bottom,GradientType=0 ) !important;
+}
+@mixin box_shadow($shadow: #000000){
+	-moz-box-shadow: 0 0 5px $shadow;
+	-webkit-box-shadow: 0 0 5px $shadow;
+	box-shadow: 0 0 5px $shadow;
+}
+@mixin box_shadow_inset($shadow: #000000){
+	-moz-box-shadow: inset 0 1px 1px $shadow;
+	-webkit-box-shadow: inset 0 1px 1px $shadow;
+	box-shadow: inset 0 1px 1px $shadow;
+}
+@mixin anim_transicion_ease( $segundos: 0.3s ){
+	transition: all $segundos ease;
+	-ms-transition: all $segundos ease;
+	-webkit-transition: all $segundos ease;
+	-o-transition: all $segundos ease;
+	-moz-transition: all $segundos ease;
+}
+@mixin anim_transicion_linear( $segundos: 0.3s ){
+	transition: all $segundos linear;
+	-ms-transition: all $segundos linear;
+	-webkit-transition: all $segundos linear;
+	-o-transition: all $segundos linear;
+	-moz-transition: all $segundos linear;
+}
+@mixin anim_key( $anim: spin, $segundos: 0.3s ){
+	-webkit-animation: $anim $segundos linear;
+	-moz-animation: $anim $segundos linear;
+	animation: $anim $segundos linear;
+}
+@mixin anim_key_infinite( $anim: spin, $segundos: 0.3s ){
+	-webkit-animation: $anim $segundos infinite linear;
+	-moz-animation: $anim $segundos infinite linear;
+	animation: $anim $segundos infinite linear;
+}

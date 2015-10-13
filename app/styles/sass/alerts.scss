@@ -1,0 +1,301 @@
+/************** ALERTS **************/
+.alert{
+	strong{
+		color: #282828!important;
+	}
+	p{
+		color: #727272!important;
+		font-size: 12px;
+
+	}
+}
+.alert-success{
+	background: #bcdbcb;
+	border: none;
+	color: #3c763d;
+	.close{
+		//background: url("../images/ico-close-green.png") center center no-repeat;
+		background-size: contain;
+		width: 15px;
+		height: 15px;
+		@include anim_transicion_ease(0.3s);
+		span{
+			display: none;
+		}
+	}
+}
+.alert-info{
+	background: #cee7fd;
+	border: none;
+	.close{
+		background: url("../images/ico-close-green.png") center center no-repeat;
+		background-size: contain;
+		width: 15px;
+		height: 15px;
+		@include anim_transicion_ease(0.3s);
+		span{
+			display: none;
+		}
+	}
+}
+@mixin loading($bg-size, $w-h, $margin) {
+	background: url("../images/loader.png") no-repeat;
+	background-size: $bg-size;
+	width: $w-h;
+	height: $w-h;
+	display: block;
+	clear: both;
+	margin: $margin auto;
+	-webkit-animation-name: spin;
+  -webkit-animation-duration: 700ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 700ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 700ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+}
+.loading {
+	@include loading(30px, 30px, 20px);
+}
+body.showLoader::after{
+	content: "";
+	color: white;
+	display: block;
+	position: fixed;
+	z-index: 990;
+	width: 100%;
+	height: 100%;
+	left:0;
+	top:0;
+	background: rgba(255,255,255,0.8);
+	cursor: not-allowed;
+}
+.loader {
+	@include loading( 80px, 100%, 0 );
+	background: url("../images/loader.png") no-repeat center center;
+	position: fixed;
+	z-index: 999;
+}
+.maps{
+	.maps_header{
+		background: #FFFFFF;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		p{
+			padding-top: 10px;
+			font-size: 12px;
+			color: #13795e;
+			a{
+				color: #13795e;
+				@include anim_transicion_ease(0.3s);
+			}
+			a:hover{
+				text-decoration: none;
+				color: #000000;
+			}
+		}
+	}
+	.title{
+		background: #007e57;
+		position: fixed;
+		top: 37px;
+		left: 0;
+		right: 0;
+		z-index: 999;
+		h1{
+			color: #FFFFFF;
+			font-size: 18px;
+			margin: 10px 0;
+			font-weight: normal;
+		}
+	}
+	.busqueda{
+		position: fixed;
+		top: 40%;
+		left: 0;
+		right: 0;
+		// bottom: 0;
+		z-index: 9999;
+		.busqueda-content{
+			background: #007e57;
+			padding: 0 10px;
+			margin: 0 50px;
+			@include border_radius(5px);
+			.btn{
+				margin: 10px 0;
+			}
+			.input-search{
+				border: none;
+				padding: 9px;
+				margin: 10px 0;
+				@include border_radius(3px);
+			}
+			.select-map{
+				select{
+					padding: 9px;
+					margin: 10px 0;
+				}
+			}
+		}
+	}
+	.half{
+		background: #FFFFFF;
+		position: fixed;
+		top: 76px;
+		bottom: 120px;
+		right: 0;
+		z-index: 9999;
+		width: 50%;
+		max-width: 555px;
+		border-left: 1px solid #d6d6ce;
+		// overflow: hidden;
+		.col-md-1,
+		.col-md-2,
+		.col-md-4,
+		.col-md-8,
+		.col-md-9,
+		.container,
+		.row{
+			width: auto!important;
+			padding: 0!important;
+			margin: 0!important;
+		}
+		.busqueda-inputs{
+			background: #007e57;
+			padding: 10px!important;
+			.btn-cerca{
+				width: 20%!important;
+			}
+			.inputs-buscar{
+				width: 70%!important;
+			}
+			.btn-buscar{
+				width: 10%!important;
+			}
+			.btn{
+				padding: 8px 5px;
+				margin: 0 5px;
+			}
+			.campo-input-search{
+				width: 45%!important;
+
+				.input-search{
+					margin: 0 10px 0 10px;
+				}
+			}
+			.select-map{
+				width: 45%!important;
+				select{
+					width: 100%;
+					// padding: 9px;
+					// min-width: 160px;
+					// width: 100%;
+					margin: 0 25px 0 25px;
+				}
+			}
+		}
+		.resultado{
+			padding: 15px;
+			border-bottom: 1px solid #d6d6ce;
+			font-size: 12px;
+			.sucursal{
+				padding-bottom: 5px;
+				border-bottom: 1px solid #EAEAEA;
+				a{
+					cursor: pointer;
+					font-size: 11px;
+					float: right;
+					color: #13795e;
+					position: relative;
+					top: -15px;
+					@include anim_transicion_ease(0.3s);
+				}
+				a:hover{
+					text-decoration: none;
+					color: #000000;
+				}
+			}
+			.telyhorario{
+				font-size: 11px;
+				color: #666666;
+				overflow: hidden;
+				clear: both;
+				padding: 5px 0;
+				border-bottom: 1px solid #EAEAEA;
+				.ng-binding{
+					display: block;
+					width: 50%;
+					float: left;
+					strong{
+						display: block;
+						clear: both;
+					}
+				}
+			}
+			.otrosdatos{
+				font-size: 11px;
+				color: #666666;
+				overflow: hidden;
+				clear: both;
+				padding: 10px 0 0 0;
+				.abierto,
+				.divisas,
+				.citas{
+					display: block;
+					width: 33%;
+					float: left;
+				}
+			}
+		}
+	}
+	.map-footer{
+		border-top: 1px solid #d6d6ce;
+		background: #FFFFFF;
+		padding: 10px 0;
+		position: fixed;
+		bottom: 34px;
+		left: 0;
+		right: 0;
+		z-index: 99999;
+		h5{
+			margin-top: 0;
+		}
+		p{
+			font-size: 12px;
+			margin: 0 0 3px 0;
+		}
+		a{
+			color: #13795e;
+			@include anim_transicion_ease(0.3s);
+		}
+		a:hover{
+			text-decoration: none;
+			color: #000000;
+		}
+		.phones{
+			p{
+				display: block;
+				overflow: hidden;
+				clear: both;
+			}
+			a{
+				float: right;
+				margin-right: 60px;
+			}
+		}
+		.border{
+			border-left: 1px solid #d6d6ce;
+			h5,
+			p{
+				margin-left: 60px;
+			}
+		}
+	}
+}

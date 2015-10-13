@@ -1,0 +1,212 @@
+/************** RESPONSIVE **************/
+@media screen and (max-width: 992px) {
+	.login_content,
+	.signup_content{
+		padding-top: 80px;
+		padding-bottom: 55px;
+		overflow: hidden;
+		.signup_header{
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 999;
+			background: #FFFFFF;
+			padding: 15px 0;
+			@include box_shadow(#CCCCCC);
+			.logo{
+				background: url("../images/logo2.png") no-repeat;
+				background-size: contain;
+				width: 175px;
+				height: 45px;
+			}
+			.btn-salir{
+				width: 150px;
+			}
+		}
+		h1{
+			color: #282828;
+			font-size: 18px;
+		}
+		.tooltip-input{
+			position: relative;
+			width: auto;
+			margin-left: 0px;
+			margin-top: 0px;
+			top: 5px;
+			.arrow{
+				background: url("../images/arrow-tooltip.png") no-repeat;
+				background-size: contain;
+				width: 19px;
+				height: 13px;
+				margin-left: 10px;
+				margin-top: -17px;
+			}
+		}
+	}
+	.footer,
+	.login_header,
+	.login_footer,
+	.signup_footer{
+		p{
+			padding: 5px 0!important;
+			margin: 0;
+			text-align: center!important;
+		}
+	}
+	.content{
+		.box-notifications{
+			.row{
+				.cell{
+					p{
+						span{
+							display: block;
+							clear: both;
+						}
+					}
+				}
+			}
+		}
+	}
+	.maps{
+		.maps_header{
+			p{
+				padding: 5px 0!important;
+				margin: 0;
+				text-align: center!important;
+			}
+		}
+		.title{
+			top: 55px;
+			h1{
+				color: #FFFFFF;
+				font-size: 16px;
+				margin: 10px 0;
+				font-weight: normal;
+				text-align: center;
+			}
+		}
+		.busqueda{
+			top: 30%;
+		}
+		.half{
+			top: 91px;
+			bottom: 51px;
+			right: 0;
+			z-index: 9999;
+			width: 50%;
+			border-left: 1px solid #d6d6ce;
+			// overflow: hidden;
+			.col-md-1,
+			.col-md-2,
+			.col-md-4,
+			.col-md-8,
+			.col-md-9,
+			.container,
+			.row{
+				width: auto!important;
+				padding: 0!important;
+				margin: 0!important;
+			}
+			.busqueda-inputs{
+				background: #007e57;
+				padding: 10px!important;
+				.btn-cerca{
+					width: 100%!important;
+				}
+				.inputs-buscar{
+					width: 100%!important;
+				}
+				.btn-buscar{
+					width: 100%!important;
+				}
+				.btn{
+					margin: 5px 0;
+				}
+				.campo-input-search{
+					width: 100%!important;
+
+					.input-search{
+						margin: 10px 0 5px 0;
+					}
+				}
+				.select-map{
+					width: 100%!important;
+					select{
+						width: 100%;
+						// padding: 9px;
+						// min-width: 160px;
+						// width: 100%;
+						margin: 5px 0;
+					}
+				}
+			}
+		}
+	}
+	.angular-google-map-container{
+		top: 93px;
+		bottom: 52px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.header{
+		@include box_shadow(#888888);
+		.main-menu{
+			#menu-options{
+				float: none!important;
+				border: none!important;
+				li{
+					background: none!important;
+					border-bottom: 1px solid #1a8b68;
+					padding: 5px 0 8px 0;
+					a{
+						max-width: 100%!important;
+						height: auto;
+
+					}
+				}
+			}
+			.navbar{
+				.logo{
+					margin: 5px auto!important;
+				}
+			}
+		}
+	}
+	.content{
+		padding: 80px 0 65px 0;
+	}
+}
+@media screen and (max-width: 370px) {
+	.signup_content{
+		.signup_header{
+			.logo{
+				width: 150px;
+				height: 40px;
+			}
+			.btn-salir{
+				width: 120px;
+			}
+		}
+	}
+	.content{
+		.box-notifications{
+			.row{
+				.info-account{
+					width: 100%!important;
+					clear: both!important;
+					margin: 0 auto!important;
+					p{
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	.maps{
+		.half{
+			width: 100%;
+			border: none;
+		}
+	}
+}

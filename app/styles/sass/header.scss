@@ -1,0 +1,88 @@
+/************** INNER HTMLS **************/
+.header {
+	border-top: 20px solid #e8e6de;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	.main-menu{
+		margin: 0 -15px;
+		background: white;
+		.navbar-toggle{
+			float: left!important;
+			border: none;
+			margin: 12px 0 0 0!important;
+			.icon-bar{
+				background: #007e57;
+				@include anim_transicion_ease(0.3s);
+			}
+		}
+		.navbar-toggle:hover{
+			background: transparent;
+			.icon-bar{
+				background: #86bd4a;
+			}
+		}
+		.navbar{
+			border: none !important;
+			background: transparent !important;
+			margin: 0;
+			padding: 0;
+			.navbar-collapse{
+				margin: 0 !important;
+				clear:both;
+				background:#d81e05;
+				li{
+					a{
+						background:none;
+						color: white;
+						text-align: center;
+						display: table-cell;
+						vertical-align: middle;
+						height: 15px;
+						cursor: pointer;
+						@include anim_transicion_ease(0.3s);
+					}
+					&:hover, &.active{
+						a{
+							@include box_shadow_inset(#d81e05);
+							background:white;
+							color: #d81e05;
+						}
+					}
+				}
+			}
+			.logo{
+				background: url("../images/logo-verde.png") no-repeat left center;
+				background-size: contain;
+				width: 180px;
+				height: 75px;
+				margin-left:15px;
+			}
+		}
+		.btn-salir{
+			width: 150px !important;
+			margin:12px 15px 0 0;
+			padding:10px 0;
+		}
+		.user{
+			max-width: 180px;
+			float: right;
+			text-align: right;
+			margin: 17px 30px 0 0;
+
+			p{
+				font-size: 0.9em;
+				font-weight: bold;
+				margin: 0 0 5px;
+				span{
+					font-weight: normal;
+					display: block;
+					clear: both;
+					font-size: 0.7em;
+				}
+			}
+		}
+	}
+}
