@@ -27,7 +27,17 @@
 		}
 	}
 }
-
+.btns{
+	margin-top: 20px;
+	overflow:hidden;
+	button{
+		margin: 0;
+		width: 48%;
+		&:first-child{
+			margin-right: 4%;
+		}
+	}
+}
 .btn-success{
 	background: $dred;
 	width: 100%;
@@ -36,7 +46,19 @@
 		background: $red;
 	}
 	&[disabled]{
-		background: #b5121b;
+		background: $dred;
+	}
+}
+.btn-gray{
+	color:white;
+	background: $default-color;
+	width: 100%;
+	border: 1px solid $default-color !important;
+	&:hover, &:focus, &:active{
+		background: $gray;
+	}
+	&[disabled]{
+		background: $default-color;
 	}
 }
 .btn-danger{

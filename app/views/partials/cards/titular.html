@@ -70,55 +70,112 @@
 		<p>25/10/2015</p>
 	</div>
 </div>
-<div class="row menu-movs">
-  <p class="col-md-4 text-center active">Movimientos</p>
-  <p class="col-md-4 text-center">Meses sin intereses</p>
-  <p class="col-md-4 text-center">Estados de cuenta</p>
+
+<!--  MOVIMIENTOS se muestra por default -->
+<div class="movs-col">
+	<div class="row menu-movs">
+	  <p class="col-md-4 text-center active">Movimientos</p>
+	  <p class="col-md-4 text-center">Meses sin intereses</p>
+	  <p class="col-md-4 text-center">Estados de cuenta</p>
+	</div>
+	<div class="row period">
+	  <p class="col-md-6 text-center active"><span>Periodo anterior</span></p>
+	  <p class="col-md-6 text-center"><span>Periodo actual</span></p>
+	</div>
+	<div class="row movs-tools">
+	  <div class="col-md-6">
+	    <input type="search" placeholder="Buscar movimientos">
+	  </div>
+	  <div class="col-md-4 text-right">
+	    Descargar movimientos:
+	  </div>
+	  <a class="col-md-1"><i class="ico-xml"></i>Excel</a>
+	  <a class="col-md-1"><i class="ico-pdf"></i>PDF</a>
+	</div>
+	<div class="table-responsive movs-list">
+	  <table class="table">
+	    <thead>
+	      <tr>
+	        <th>FECHA</th>
+	        <th>DESCRIPCI&Oacute;N</th>
+	        <th class="text-right">IMPORTE</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td>24/08/2015</td>
+	        <td>Departamentales</td>
+	        <td class="text-right negative-number">-$ 5,000.00</td>
+	      </tr>
+	      <tr>
+	        <td>24/08/2015</td>
+	        <td>Departamentales</td>
+	        <td class="text-right">$ 2,000.00</td>
+	      </tr>
+	      <tr>
+	        <td>24/08/2015</td>
+	        <td>Departamentales</td>
+	        <td class="text-right negative-number">-$ 5,000.00</td>
+	      </tr>
+	      <tr>
+	        <td>24/08/2015</td>
+	        <td>Departamentales</td>
+	        <td class="text-right">$ 3,000.00</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
 </div>
-<div class="row period">
-  <p class="col-md-6 text-center active"><span>Periodo anterior</span></p>
-  <p class="col-md-6 text-center"><span>Periodo actual</span></p>
+<!--  MOVIMIENTOS se muestra por default -->
+
+<!-- ESTADOS DE CUENTA -->
+<div class="account-states-col" style="display:none">
+	<div class="row movs-tools">
+	 	<div class="col-md-12">
+			<input type="search" placeholder="Buscar por Año / Mes">
+		</div>
+	</div>
+	<ul class="account-states col-md-12">
+	    <li>
+	    	<h4>2015</h4>
+	    	<table>
+	    		<tr>
+	    			<td>SEPTIEMBRE</td>
+	    			<td class="text-right"><a class="ico-download">Descargar</a></td>
+	    			<td class="text-right"><a class="ico-print">Imprimir</a></td>
+	    		</tr>
+	    		<tr>
+	    			<td>AGOSTO</td>
+	    			<td class="text-right"><a class="ico-download">Descargar</a></td>
+	    			<td class="text-right"><a class="ico-print">Imprimir</a></td>
+	    		</tr>
+	    		<tr>
+	    			<td>JULIO</td>
+	    			<td class="text-right"><a class="ico-download">Descargar</a></td>
+	    			<td class="text-right"><a class="ico-print">Imprimir</a></td>
+	    		</tr>
+	    	</table>	
+	    </li>
+	    <li class="closed">
+	    	<h4>2014</h4>
+	    	<table>
+	    		<tr>
+	    			<td>SEPTIEMBRE</td>
+	    			<td class="text-right"><a class="ico-download">Descargar</a></td>
+	    			<td class="text-right"><a class="ico-print">Imprimir</a></td>
+	    		</tr>
+	    		<tr>
+	    			<td>AGOSTO</td>
+	    			<td class="text-right"><a class="ico-download">Descargar</a></td>
+	    			<td class="text-right"><a class="ico-print">Imprimir</a></td>
+	    		</tr>
+	    		<tr>
+	    			<td>JULIO</td>
+	    			<td class="text-right"><a class="ico-download">Descargar</a></td>
+	    			<td class="text-right"><a class="ico-print">Imprimir</a></td>
+	    		</tr>
+	    	</table>	
+	    </li>
+	</ul>
 </div>
-<div class="row movs-tools">
-  <div class="col-md-6">
-    <input type="search" placeholder="Buscar movimientos">
-  </div>
-  <div class="col-md-4 text-right">
-    Descargar movimientos:
-  </div>
-  <a class="col-md-1"><i class="ico-xml"></i>Excel</a>
-  <a class="col-md-1"><i class="ico-pdf"></i>PDF</a>
-</div>
-<div class="table-responsive movs-list">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>FECHA</th>
-        <th>DESCRIPCI&Oacute;N</th>
-        <th class="text-right">IMPORTE</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>24/08/2015</td>
-        <td>Departamentales</td>
-        <td class="text-right negative-number">-$ 5,000.00</td>
-      </tr>
-      <tr>
-        <td>24/08/2015</td>
-        <td>Departamentales</td>
-        <td class="text-right">$ 2,000.00</td>
-      </tr>
-      <tr>
-        <td>24/08/2015</td>
-        <td>Departamentales</td>
-        <td class="text-right negative-number">-$ 5,000.00</td>
-      </tr>
-      <tr>
-        <td>24/08/2015</td>
-        <td>Departamentales</td>
-        <td class="text-right">$ 3,000.00</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<!-- ESTADOS DE CUENTA -->
