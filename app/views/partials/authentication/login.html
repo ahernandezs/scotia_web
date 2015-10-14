@@ -38,50 +38,38 @@
 		<alert type="success" ng-bind-html="invite.message" class="success ng-isolate-scope alert-warning alert-dismissible" ng-show="invite.show" close="invite.show = false"></alert>
 
 		<div class="row" ng-hide="CheckLogin">
-
-			<div class="col-md-8 col-md-offset-2">
-
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h1>Acceso a Fundaci&oacute;n Dond&eacute; Banco</h1>
-						Por tu seguridad, comprueba que la imagen que se muestra a continuaci&oacute;n y el saludo corresponde con lo que seleccionaste en tu acceso a Fundaci&oacute;n Dond&eacute; Banco
-					</div>
-					<div class="panel-body">
-						<div class="row">
-							<form name="login2">
-								<div class="col-md-6 col-md-offset-3">
-									<h2 class="text-center">{{auth.response.anti_phishing_statement}}</h2>
-									<div class="user">
-										<img alt="..." ng-src="data:image/png;base64,{{auth.response.image_content}}" class="img-thumbnail">
-									</div>
-									<div ng-show="auth.response.new_condition_action === 'Y'">
-										<label class="checkbox">
-											<input type="checkbox" ng-model="auth.new_condition_action" ng-required="auth.response.new_condition_action === 'Y'">
-											Acepto <a href="javascript:void(0);">T&eacute;rminos y Condiciones de Uso</a>,<br>Fundaci&oacute;n Dond&eacute; Banco
-										</label>
-									</div>
-									<div>
-										<alert type="danger" class="alert ng-isolate-scope alert-danger alert-dismissible" ng-show="danger.show" close="danger.show = false">
-											{{danger.message}}
-										</alert>
-										<alert type="warning" class="alert ng-isolate-scope alert-warning alert-dismissible" ng-show="warning.show" close="warning.show = false">
-											{{warning.message}}
-										</alert>
-									</div>
-									<input type="password" class="form-control" placeholder="Ingresa tu contrase&ntilde;a" ng-model="auth.password" ng-required="true" autofocus ng-minlength="8" maxlength="12" onkeypress="return validate(event)">
-									<button class="btn btn-success form-control" ng-click="login()" ng-disabled="login2.$invalid || logining">Acceder</button>
-								</div>
-							</form>
+			<div class="col-md-6">
+				<div class="panel">
+					<h2>Bienvenido</h2>
+					<p>Revisa tu frase de seguridad y selecciona la imagen de correspondiente para continuar.</p>
+					<h3>"Hola Mundo"</h3>
+					<form name="login2">
+						<h2 class="text-center">{{auth.response.anti_phishing_statement}}</h2>
+						<div class="image-pishing">
+							<img alt="..." ng-src="images/thumbnail.jpg">
+							<img alt="..." ng-src="images/thumbnail.jpg">
+							<img alt="..." ng-src="images/thumbnail.jpg">
+							<img alt="..." ng-src="images/thumbnail.jpg">
+							<img alt="..." ng-src="images/thumbnail.jpg">
 						</div>
-					</div>
-					<div class="panel-footer text-center">
-						Si los datos no coinciden comun&iacute;cate a nuestro centro de atenci&oacute;n telef&oacute;nica: <a href="tel: 018003663386">01 800 3663386</a>
-					</div>
+						<div class="image-pishing">
+							<img alt="..." ng-src="images/thumbnail.jpg">
+							<img alt="..." ng-src="images/thumbnail.jpg">
+							<img alt="..." ng-src="images/thumbnail.jpg">
+							<img alt="..." ng-src="images/thumbnail.jpg">
+							<img alt="..." ng-src="images/thumbnail.jpg">
+						</div>
+						<p>Ingresa tu contraseña</p>
+						<input type="password" class="form-control" placeholder="Contrase&ntilde;a" ng-model="auth.password" ng-required="true" autofocus ng-minlength="8" maxlength="12" onkeypress="return validate(event)">
+						<div class="btns">
+							<button class="btn btn-gray pull-left" ng-click="login()">Regresar</button>
+							<button class="btn btn-success pull-right" ng-click="login()" ng-disabled="login2.$invalid || logining">Entrar</button>
+						</div>
+					</form>
 				</div>
 			</div>
-
 		</div>
-		<div class="download-app pull-right">
+		<div class="download-app">
 			<a href="#/" class="ico-ios"></a>
 			<a href="#/" class="ico-android"></a>
 			<a href="#/" class="ico-bb"></a>
@@ -97,6 +85,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 	<div class="container icon-row">
 		<div class="row">
 			<a href="#/" class="ico-facebook"></a>

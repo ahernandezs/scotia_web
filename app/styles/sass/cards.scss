@@ -117,6 +117,7 @@
 	}
 }
 .movs-tools{
+	background:white;
 	padding:10px 0;
 	color: $mgray;
 	input{
@@ -168,6 +169,70 @@
 						font-weight: bold;
 						&.negative-number{
 							color:$dred;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.account-states{
+	border-top: 1px solid $gray;
+	ul,li{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		&.closed{
+			h4{
+				&:after{
+					@include rotate(135deg);
+				}
+			}
+			table{
+				display: none;
+			}
+		}
+		h4{
+			padding: 10px;
+			margin: 0;
+			position: relative;
+			&:after{
+				content: "";
+				display: block;
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				top:50%;
+				margin-top: -5px;
+				right: 15px;
+				border-top: 2px solid $gray;
+				border-right: 2px solid $gray;
+				@include rotate(-45deg);
+			}
+		}
+		table{
+			width: 100%;
+			tr{
+				background:white;
+				&:nth-child(even){
+					background:$lgray;
+				}
+				td{
+					color:$gray;
+					padding:10px;
+					a, a:hover {
+						cursor: pointer;
+						color: #2a5db0;
+						font-size: 0.8em;
+						text-decoration: underline;
+						padding-left: 20px;
+						&.ico-download{
+							background:url("../images/ico-download.png") no-repeat left center;
+							background-size:15px;
+						}
+						&.ico-print{
+							background:url("../images/ico-print.png") no-repeat left center;
+							background-size:15px;
 						}
 					}
 				}

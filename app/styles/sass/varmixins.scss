@@ -19,6 +19,11 @@ $gray:#cccccc;
 	-webkit-border-radius: $radius !important;
 	-moz-border-radius: $radius !important;
 }
+@mixin rotate( $degrees: 45deg ){
+	-ms-transform: rotate($degrees); 
+    -webkit-transform: rotate($degrees); 
+    transform: rotate($degrees);
+}
 @mixin border_top_radius($radius: 10px) {
 	border-top-left-radius: $radius !important;
 	-webkit-border-top-left-radius: $radius !important;

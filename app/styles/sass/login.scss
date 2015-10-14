@@ -4,14 +4,39 @@
 	background-size: cover;
 	min-height:650px;
 	position: relative;
-	/*position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;*/
 }
-.login_content {
+.login_content{
 	padding-top: 85px;
+	h2{
+		color:$red;
+		font-size: 1.6em;
+		font-weight: normal;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	h3{
+		text-align: center;
+		color: $gray;
+		font-weight: normal;
+	}
+	p{
+		color:#606060;
+		font-size: 0.9em;
+	}
+	input{
+	background: white;
+	border-color: #cccccc;
+	margin: 12px 0;
+	padding: 10px;
+	height: 40px;
+	@include border_radius( 3px );
+	&:focus{
+		border-color:#cccccc;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		}
+	}
 	.login_header{
 		background: #FFFFFF;
 		border-top: 20px solid #e8e6de;
@@ -49,30 +74,6 @@
 		margin: 60px 0 0;
 		background: rgba(255, 255, 255, 0.95);
 		@include border_radius(10px);
-		input{
-			background: white;
-			border-color: #cccccc;
-			margin: 12px 0;
-			padding: 10px;
-			height: 40px;
-			@include border_radius( 3px );
-			&:focus{
-				border-color:#cccccc;
-				box-shadow: none;
-				-webkit-box-shadow: none;
-				-moz-box-shadow: none;
-			}
-		}
-		h2{
-			color:#d81e05;
-			font-size: 1.6em;
-			font-weight: normal;
-			margin-bottom: 20px;
-		}
-		p{
-			color:#606060;
-			font-size: 0.9em;
-		}
 		a, a:hover {
 			color: #2a5db0;
 			font-size: 1.2em;
@@ -87,7 +88,9 @@
 		}
 	}
 	.download-app{
-		margin: 80px -15px 0 0;
+		position: absolute;
+		bottom:100px;
+		right: 0;
 		padding:10px 10px 5px;
 		min-width: 40%;
 		background:rgba(255, 255, 255, 0.8);
@@ -154,4 +157,24 @@
 			}
 		}
 	}
+	//IMAGES PASS
+	.panel{
+		max-width: 100%;
+		padding: 20px;
+		margin: 60px 0 0;
+		background: rgba(255, 255, 255, 0.95);
+		@include border_radius(10px);
+		.image-pishing{
+			text-align: center;
+			margin: 20px 0;
+			img{
+				display: inline-block;
+				width: 65px;
+				height: 65px;
+				margin: 0 10px;
+				@include border_radius(2px);
+			}
+		}
+	}
 }
+
