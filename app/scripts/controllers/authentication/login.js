@@ -46,6 +46,7 @@ function($scope, $rootScope, $location, authorizeProviderFD, api, $http, dataAut
 				errorHandler.setError(error);
 			}
 		);*/
+//$location.path( '/register' );
 $location.path( '/password' );
 	}
 

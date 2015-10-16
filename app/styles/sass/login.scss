@@ -4,6 +4,65 @@
 	background-size: cover;
 	min-height:650px;
 	position: relative;
+	// REGISTER
+	&.register{
+		background:white;
+		padding-top: 50px;
+		.admin-setup-card{
+			.setup-card-nav{
+				border-bottom:1px solid $gray;
+				background:url(../images/border-top-register.gif) repeat-x;
+				li{
+					border-top:5px solid #bdbdbd;
+					&.active{
+						background:#d4d4d4;
+						border-top:5px solid $dred;
+					}
+				}
+			}
+		}
+		.title-red{
+			clear: both;
+			margin: 40px 0;
+		}
+		p{
+			margin-bottom: 5px;
+			font-weight: normal;
+			span{
+				color:$red;
+			}
+			+ img{
+				margin-top: 30px;
+			}
+		}
+		input{
+			margin: 0 0 20px;
+		}
+		.btn-success{
+			margin-top: 30px;
+		}
+		.checkbox{
+			margin: 0;
+			input{
+				height: auto;
+			}
+			span{
+				display: inline-block;
+				vertical-align: middle;
+				margin:0 10px 0;
+			}
+		}
+		.image-pishing{
+			text-align: center;
+			img{
+				display: inline-block;
+				width: 45px;
+				height: 45px;
+				margin: 10px;
+				@include border_radius(2px);
+			}
+		}
+	}
 }
 .login_content{
 	padding-top: 85px;

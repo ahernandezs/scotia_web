@@ -1,201 +1,269 @@
-<div class="signup_content">
-	<div class="signup_header">
-		<div class="container">
-			<button class="btn btn-warning btn-salir pull-right" ng-click="logout()">Salir</button>
-			<div class="logo"></div>
-		</div>
+<div class="login_content">
+	<div class="login_header container">
+			<div class="row">
+				<p class="col-md-7"><a href="#/" class="logo"></a></p>
+				<p class="col-md-3 text-right"><a href="#/map">Preguntas frecuentes</a></p>
+				<p class="col-md-2 text-center"><a href="#/map">Cont&aacute;ctanos</a></p>
+			</div>
 	</div>
-	<div class="col-md-8 col-md-offset-2">
-		<h1>Registro</h1>
-		<div class="panel panel-default">
-			<div class="panel-heading">Por tu seguridad, cambie su contrase&ntilde;a y establezca las m&aacute;ximas medidas de seguridad</div>
-				<div class="panel-body animate-switch">
-					<div class="paso">
-						<form name="register1">
-							<div ng-click="saltar(0)">
-								<h2><span ng-class="register1.$invalid ?  'ico-check uncheck' : 'ico-check'"></span>Paso 1 <span class="space">Cambio de Contrase&ntilde;a</span></h2>
-							</div>
-							<div ng-show="selection==0">
-								<div class="row">
-									<div class="col-md-4 col-md-offset-1">
-										<p>*Ingresa tu contrase&ntilde;a</p>
-									</div>
-									<div class="col-md-5">
-										<input type="password" class="form-control" ng-required="true" ng-model="dataRegister.password" placeholder="Contraseña actual" ng-focus="old=true" ng-blur="old=false">
-										<div class="tooltip-input" ng-show="old">
-											<div class="arrow"></div>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-4 col-md-offset-1">
-										<p>*Nueva contrase&ntilde;a</p>
-									</div>
-									<div class="col-md-5">
-										<input type="password" class="form-control" ng-required="true" ng-model="dataRegister.new_password" placeholder="Nueva contraseña" maxlength="12" ng-focus="new=true" ng-blur="new=false">
-										<div class="tooltip-input" ng-show="new">
-											<div class="arrow"></div>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-4 col-md-offset-1">
-										<p>*Confirma contrase&ntilde;a</p>
-									</div>
-									<div class="col-md-5">
-										<input type="password" class="form-control" ng-required="true" ng-model="dataRegister.confirm_password" placeholder="Confirma tu contraseña" maxlength="12" ng-focus="confirm=true" ng-blur="confirm=false">
-										<div class="tooltip-input" ng-show="confirm">
-											<div class="arrow"></div>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-										</div>
-									</div>
-								</div>
-								<div>
-									<alert type="warning" class="alert ng-isolate-scope alert-warning alert-dismissible" ng-show="warning.show" close="warning.show = false">
-										{{warning.message}}
-									</alert>
-								</div>
-								<div class="row">
-									<div class="col-md-5 col-md-offset-5">
-										<button class="btn btn-success form-control" ng-click="saltar(1);" ng-disabled="register1.$invalid" >Cambiar contrase&ntilde;a y continuar</button>
-									</div>
-								</div>
-							</div>
-						</form>
+	<div class="container login_back register" ng-controller="LoginCtrl">
+		<div class="admin-setup-card">
+			<div class="row setup-card-nav">
+				<ul class="list-unstyled">
+				    <li class="active">1. Datos de registro</li>
+				    <li>2. Datos de usuario</li>
+				    <li>3. Activar Token m&oacute;vil</li>
+				</ul>
+			</div>
+
+			<!-- PRIMERA PARTE CON CODIGO -->
+			<h2 class="title-red">Datos de registro</h2>
+			<div class="row">
+				<label class="col-md-6 col-md-offset-3">
+					<p>Ingresa el código de activación que recibiste del call center.</p>
+					<input class="col-md-12" type="number">
+				</label>
+			</div>
+			<div class="row">
+				<label class="col-md-6 col-md-offset-3">
+					<p>Fecha de nacimiento.</p>
+					<div class="row">
+						<div class="dropdown col-md-4">
+						  <button class="btn btn-select dropdown-toggle col-md-12" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    D&iacute;a
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">1</a></li>
+						    <li><a href="#">1</a></li>
+						    <li><a href="#">3</a></li>
+						    <li><a href="#">4</a></li>
+						  </ul>
+						</div>
+						<div class="dropdown col-md-4">
+						  <button class="btn btn-select dropdown-toggle col-md-12" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    Mes
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">Enero</a></li>
+						    <li><a href="#">Febrero</a></li>
+						    <li><a href="#">Marzo</a></li>
+						    <li><a href="#">Abril</a></li>
+						  </ul>
+						</div>
+						<div class="dropdown col-md-4">
+						  <button class="btn btn-select dropdown-toggle col-md-12" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    A&ntilde;o
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">2010</a></li>
+						    <li><a href="#">2011</a></li>
+						    <li><a href="#">2012</a></li>
+						    <li><a href="#">2013</a></li>
+						  </ul>
+						</div>
 					</div>
-					<div class="paso">
-						<form name="register2">
-							<div ng-click="saltar(1)">
-								<h2><span ng-class="register2.$invalid ?  'ico-check uncheck' : 'ico-check'"></span>Paso 2 <span class="space">Imagen y saludo antiphishing</span></h2>
-							</div>
-							<div ng-show="selection==1">
-								<div class="row">
-									<div class="col-md-9 col-md-offset-1">
-										<p>*Selecciona una imagen</p>
-									</div>
-									<div class="col-md-9 col-md-offset-2">
-										<ng-form name="registerImageForm" class="register-pass">
-											<div class="images row">
-												<div >
-													<label class="col-xs-2 text-center" ng-repeat="image in data.data.images">
-														<span ng-click="selectImage(image.id)" ng-class="{'selected' : image.id === dataRegister.image_id}" class="img-responsive">
-															<i></i><img alt="..." ng-src="data:image/png;base64,{{image.image_content}}">
-														</span>
-													</label>
-												</div>
-											</div>
-										</ng-form>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-4 col-md-offset-1">
-										<p>*Ingresa tu saludo secreto</p>
-									</div>
-									<div class="col-md-5">
-										<input type="text" class="form-control" ng-model="dataRegister.saludo" ng-required="true" placeholder="Saludo secreto" ng-focus="saludo=true" ng-blur="saludo=false">
-										<div class="tooltip-input" ng-show="saludo">
-											<div class="arrow"></div>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-										</div>
-									</div>
-								</div>
-								<div>
-									<alert type="warning" class="alert ng-isolate-scope alert-warning alert-dismissible" ng-show="warning.show" close="warning.show = false">
-										{{warning.message}}
-									</alert>
-								</div>
-								<div class="row">
-									<div class="col-md-5 col-md-offset-5">
-										<button class="btn btn-success form-control" ng-click="saltar(2);" ng-disabled="register2.$invalid">Continuar</button>
-									</div>
-								</div>
-							</div>
-						</form>
+				</label>
+			</div>
+			<div class="row col-md-4 col-md-offset-4">
+				<button class="btn btn-success">Continuar</button>
+			</div>
+			<!-- PRIMERA PARTE CON CODIGO -->
+
+			<!-- PRIMERA PARTE SIN CODIGO -->
+			<div class="row">
+				<div class="col-md-4 col-md-offset-1">
+					<div class="row">
+						<label class="col-md-12">
+							<p>Ingresa los digitos de tu tarjeta.</p>
+							<input class="col-md-12" type="number">
+						</label>
 					</div>
-					<div class="paso">
-						<form name="register3">
-							<div ng-click="saltar(2)">
-								<h2><span ng-class="register3.$invalid ?  'ico-check uncheck' : 'ico-check'"></span>Paso 3 <span class="space">Preguntas secretas, t&eacuterminos y condiciones de uso</span></h2>
-							</div>
-							<div ng-show="selection==2">
-								<div class="row">
-									<div class="col-md-4 col-md-offset-1">
-										<p>*Pregunta 1</p>
-									</div>
-									<div class="col-md-5">
-										<select class="form-control" ng-model="dataRegister.question1" ng-options="question.description for question in data.data.questions" ng-required="true" ng-focus="p1=true" ng-blur="p1=false">
-											<option value="">Selecciona una pregunta</option>
-										</select>
-										<div class="tooltip-input" ng-show="p1">
-											<div class="arrow"></div>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-										</div>
-										<input type="text" class="form-control" placeholder="Escribe la resupuesta" ng-model="dataRegister.response1" ng-required="true" ng-focus="r1=true" ng-blur="r1=false">
-										<div class="tooltip-input" ng-show="r1">
-											<div class="arrow"></div>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-4 col-md-offset-1">
-										<p>*Pregunta 2</p>
-									</div>
-									<div class="col-md-5">
-										<select class="form-control" ng-model="dataRegister.question2" ng-options="question.description for question in data.data.questions" ng-required="true" ng-focus="p2=true" ng-blur="p2=false">
-											<option value="">Selecciona una pregunta</option>
-										</select>
-										<div class="tooltip-input" ng-show="p2">
-											<div class="arrow"></div>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-										</div>
-										<input type="text" class="form-control" placeholder="Escribe la resupuesta" ng-model="dataRegister.response2" ng-required="true" ng-focus="r2=true" ng-blur="r2=false">
-										<div class="tooltip-input" ng-show="r2">
-											<div class="arrow"></div>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-8 col-md-offset-1">
-										<label class="checkbox">
-											<input type="checkbox" ng-model="dataRegister.new_condition_action" ng-required="true">
-											Acepto <a href="javascript:void(0);">T&eacute;rminos y Condiciones de Uso</a>, Fundaci&oacute;n Dond&eacute; Banco
-										</label>
-									</div>
-								</div>
-								<div class="divider"></div>
-								<div>
-									<alert type="danger" class="alert ng-isolate-scope alert-danger alert-dismissible" ng-show="danger.show" close="danger.show = false">
-										{{danger.message}}
-									</alert>
-									<alert type="warning" class="alert ng-isolate-scope alert-warning alert-dismissible" ng-show="warning.show" close="warning.show = false">
-										{{warning.message}}
-									</alert>
-								</div>
-								<div class="row">
-									<div class="col-md-5 col-md-offset-5">
-										<button class="btn btn-success form-control" ng-click="signup();" ng-disabled="register1.$invalid || register2.$invalid || register3.$invalid || sending" >Acceder a cuentas</button>
-									</div>
-								</div>
-							</div>
-						</form>
+					<div class="row">
+						<p class="col-md-7">Fecha de vencimiento.</p>
+						<p class="col-md-5">C&oacute;digo de seguridad</p>
+					</div>
+					<div class="row">
+						<label class="col-md-4">
+							<input class="col-md-12" type="number" placeholder="Mes">
+						</label>
+						<label class="col-md-4">
+							<input class="col-md-12" type="number" placeholder="Año">
+						</label>
+						<label class="col-md-4">
+							<input class="col-md-12" type="number" placeholder="CVV">
+						</label>
 					</div>
 				</div>
-			<div class="panel-footer">*Campos necesarios</div>
-		</div>
-		<div class="signup_footer">
-			<div class="container">
-				<div class="row">
-					<p class="col-md-6">&copy; 2015 Fundaci&oacute;n Dond&eacute; Banco</p>
-					<p class="col-md-6 text-right">
-						<a href="#/terms">T&eacute;rminos y Condiciones de Uso</a> |
-						<a href="#/security">Seguridad</a>
-					</p>
+				<div class="col-md-4 col-md-offset-1">
+					<div class="row checkbox">
+						<label class="col-md-12">
+							<p>¿Cuentas con tarjetas adicionales?</p>
+							<p class="col-md-3"><input type="checkbox" class="pull-left"> <span>Si</span></p>
+							<p class="col-md-3"><input type="checkbox" class="pull-left"> <span>No</span></p>
+						</label>
+					</div>
+					<div class="row">
+						<label class="col-md-12">
+							<p>Ingresa tu fecha de nacimiento.</p>
+							<div class="row">
+								<div class="dropdown col-md-4">
+								  <button class="btn btn-select dropdown-toggle col-md-12" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    D&iacute;a
+								    <span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								    <li><a href="#">1</a></li>
+								    <li><a href="#">1</a></li>
+								    <li><a href="#">3</a></li>
+								    <li><a href="#">4</a></li>
+								  </ul>
+								</div>
+								<div class="dropdown col-md-4">
+								  <button class="btn btn-select dropdown-toggle col-md-12" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    Mes
+								    <span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								    <li><a href="#">Enero</a></li>
+								    <li><a href="#">Febrero</a></li>
+								    <li><a href="#">Marzo</a></li>
+								    <li><a href="#">Abril</a></li>
+								  </ul>
+								</div>
+								<div class="dropdown col-md-4">
+								  <button class="btn btn-select dropdown-toggle col-md-12" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    A&ntilde;o
+								    <span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								    <li><a href="#">2010</a></li>
+								    <li><a href="#">2011</a></li>
+								    <li><a href="#">2012</a></li>
+								    <li><a href="#">2013</a></li>
+								  </ul>
+								</div>
+							</div>
+						</label>
+					</div>
 				</div>
 			</div>
+			<div class="row col-md-4 col-md-offset-4">
+				<button class="btn btn-success">Continuar</button>
+			</div>
+			<!-- PRIMERA PARTE SIN CODIGO -->
+
+			<!-- DATOS DE USUARIO -->
+			<h2 class="title-red">Datos de usuario</h2>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-1">
+					<div class="row">
+						<label class="col-md-12">
+							<p>Escribe una frase de seguridad (antipishing).</p>
+							<input class="col-md-12" type="text">
+						</label>
+					</div>
+					<div class="row">
+						<label class="col-md-12">
+							<p>Selecciona una imagen de seguridad.</p>
+							<div class="image-pishing">
+								<img alt="..." ng-src="images/thumbnail.jpg">
+								<img alt="..." ng-src="images/thumbnail.jpg">
+								<img alt="..." ng-src="images/thumbnail.jpg">
+								<img alt="..." ng-src="images/thumbnail.jpg">
+								<img alt="..." ng-src="images/thumbnail.jpg">
+							</div>
+							<div class="image-pishing">
+								<img alt="..." ng-src="images/thumbnail.jpg">
+								<img alt="..." ng-src="images/thumbnail.jpg">
+								<img alt="..." ng-src="images/thumbnail.jpg">
+								<img alt="..." ng-src="images/thumbnail.jpg">
+								<img alt="..." ng-src="images/thumbnail.jpg">
+							</div>
+						</label>
+					</div>
+				</div>
+				<div class="col-md-4 col-md-offset-1">
+					<div class="row">
+						<label class="col-md-12">
+							<input class="col-md-12" type="text" placeholder="Crear usuario">
+						</label>
+					</div>
+					<div class="row">
+						<label class="col-md-12">
+							<input class="col-md-12" type="text" placeholder="Crear contraseña">
+						</label>
+					</div>
+					<div class="row">
+						<label class="col-md-12">
+							<input class="col-md-12" type="text" placeholder="Confirma tu contraseña">
+						</label>
+					</div>
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1"><button class="btn btn-success">Continuar</button></div>
+					</div>
+				</div>
+			</div>
+			<!-- DATOS DE USUARIO -->
+
+			<!-- TOKEN -->
+			<h2 class="title-red">Activar Token</h2>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-1">
+					<p>Desde la app <span>ScotiaCard</span> selecciona generador de TOKEN y copia los datos que se piden a continuación:</p>
+					<img src="images/token2.png" alt="">
+				</div>
+				<div class="col-md-4 col-md-offset-1">
+					<div class="row">
+						<label class="col-md-12">
+							<p>Ingresa los datos que aparecen en tu celular.</p>
+							<input class="col-md-12" type="text" placeholder="Token 1">
+						</label>
+					</div>
+					<div class="row">
+						<label class="col-md-12">
+							<input class="col-md-12" type="text" placeholder="Token 2">
+						</label>
+					</div>
+					<div class="row">
+						<label class="col-md-12">
+							<input class="col-md-12" type="text" placeholder="N&uacute;mero de serie">
+						</label>
+					</div>
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1"><button class="btn btn-success">Finalizar</button></div>
+					</div>
+				</div>
+			</div>
+			<!-- TOKEN -->
+		</div>
+	</div>
+</div>
+	<div class="container icon-row">
+		<div class="row">
+			<a href="#/" class="ico-facebook"></a>
+			<a href="#/" class="ico-twitter"></a>
+			<a href="#/" class="ico-youtube"></a>
+			<a href="#/" class="ico-linkedin"></a>
+			<a href="#/" class="ico-ipab"></a>
+			<a href="#/" class="ico-trusteer"></a>
+			<a href="#/" class="ico-buro"></a>
+		</div>
+	</div>
+	<div class="container footer-links">
+		<div class="row">
+			<p class="col-md-10">
+				<a href="#/">Seguridad</a>  |  
+				<a href="#/">Aviso de Privacidad</a>  |  
+				<a href="#/">FATCA</a>  |  
+				<a href="#/">Términos y condiciones</a>  |  
+				<a href="#/">Ley de Transparencia</a>  |  
+				<a href="#/">Banca y Mercados Globales</a>  |  
+				<a href="#/">Condusef</a>
+			</p>
+			<p class="col-md-2 text-right">© 2015 Scotiabank</p>
 		</div>
 	</div>
 </div>
