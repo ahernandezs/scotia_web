@@ -22,7 +22,7 @@ function($scope, $rootScope, $location, authorizeProviderFD, api, $http, dataAut
 
 	$scope.checkLogin = function(){
 		$scope.logining = true;
-		authorizeProviderFD.checkLogin($scope.auth.user_login).then(
+		/*authorizeProviderFD.checkLogin($scope.auth.user_login).then(
 			function(data) {
 				$scope.logining = false;
 				$scope.auth.with_token = data.role_id===1?'Y':'N';
@@ -45,11 +45,12 @@ function($scope, $rootScope, $location, authorizeProviderFD, api, $http, dataAut
 				$scope.logining = false;
 				errorHandler.setError(error);
 			}
-		);
+		);*/
+$location.path( '/password' );
 	}
 
 	$scope.login = function(){
-		var new_condition_action = "N";
+		/*var new_condition_action = "N";
 		if(typeof $scope.auth['new_condition_action'] !== 'undefined') {
 			if($scope.auth['new_condition_action']){
 				new_condition_action = "Y";
@@ -87,7 +88,12 @@ function($scope, $rootScope, $location, authorizeProviderFD, api, $http, dataAut
 				var result = {"data" : data, "status" : status};
 				errorHandler.setError(result);
 			}
-		);
+		);*/
+$scope.logining = true;
+api.init();
+timerService.start();
+$location.path( '/cards' );
+$scope.logining = false;
 	};
 
 	$scope.password = function(){

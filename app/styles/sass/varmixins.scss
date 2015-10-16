@@ -77,6 +77,11 @@ $gray:#cccccc;
 	-webkit-box-shadow: inset 0 1px 1px $shadow;
 	box-shadow: inset 0 1px 1px $shadow;
 }
+@mixin box_shadow_right($shadow: #000000){
+	-moz-box-shadow: 3px 0 3px $shadow;
+	-webkit-box-shadow: 3px 0 3px $shadow;
+	box-shadow: 3px 0 3px $shadow;
+}
 @mixin anim_transicion_ease( $segundos: 0.3s ){
 	transition: all $segundos ease;
 	-ms-transition: all $segundos ease;
