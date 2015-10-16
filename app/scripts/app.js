@@ -50,6 +50,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpP
       url: '/aclarations',
       templateUrl: 'views/static/aclarations.html'
     })
+    .state('cards',{
+      url: '/cards',
+      templateUrl: 'views/dashboard.html'
+    })
     .state('contact',{
       url: '/contact',
       templateUrl: 'views/static/contact.html'

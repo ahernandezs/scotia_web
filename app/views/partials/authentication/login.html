@@ -1,4 +1,3 @@
-<!--div class="login_back"><div-->
 <div class="login_content">
 	<div class="login_header container">
 			<div class="row">
@@ -13,7 +12,8 @@
 				<form class="form-signin" name="login1">
 					<h2>Ingresar a Scotiabank Tarjetas</h2>
 					<p>Ingresa tu número de usuario para acceder.</p>
-					<input type="text" class="form-control input_user" placeholder="N&uacute;mero de usuario"  ng-model="auth.user_login" ng-required="true" autofocus ng-minlength="5" maxlength="12" onkeypress="return validate(event)">
+					<!--input type="text" class="col-md-12" placeholder="N&uacute;mero de usuario"  ng-model="auth.user_login" ng-required="true" autofocus ng-minlength="5" maxlength="12" onkeypress="return validate(event)"-->
+					<input type="text" class="col-md-12" placeholder="N&uacute;mero de usuario" autofocus ng-minlength="5" maxlength="12">
 					<div>
 						<alert type="danger" class="alert ng-isolate-scope alert-danger alert-dismissible" ng-show="danger.show" close="danger.show = false">
 							{{danger.message}}
@@ -32,41 +32,6 @@
 						<p class="text-center"><a href="#/contact">Reg&iacute;strate aqu&iacute;</a></p>
 					</div>
 				</form>
-			</div>
-		</div>
-
-		<alert type="success" ng-bind-html="invite.message" class="success ng-isolate-scope alert-warning alert-dismissible" ng-show="invite.show" close="invite.show = false"></alert>
-
-		<div class="row" ng-hide="CheckLogin">
-			<div class="col-md-6">
-				<div class="panel">
-					<h2>Bienvenido</h2>
-					<p>Revisa tu frase de seguridad y selecciona la imagen de correspondiente para continuar.</p>
-					<h3>"Hola Mundo"</h3>
-					<form name="login2">
-						<h2 class="text-center">{{auth.response.anti_phishing_statement}}</h2>
-						<div class="image-pishing">
-							<img alt="..." ng-src="images/thumbnail.jpg">
-							<img alt="..." ng-src="images/thumbnail.jpg">
-							<img alt="..." ng-src="images/thumbnail.jpg">
-							<img alt="..." ng-src="images/thumbnail.jpg">
-							<img alt="..." ng-src="images/thumbnail.jpg">
-						</div>
-						<div class="image-pishing">
-							<img alt="..." ng-src="images/thumbnail.jpg">
-							<img alt="..." ng-src="images/thumbnail.jpg">
-							<img alt="..." ng-src="images/thumbnail.jpg">
-							<img alt="..." ng-src="images/thumbnail.jpg">
-							<img alt="..." ng-src="images/thumbnail.jpg">
-						</div>
-						<p>Ingresa tu contraseña</p>
-						<input type="password" class="form-control" placeholder="Contrase&ntilde;a" ng-model="auth.password" ng-required="true" autofocus ng-minlength="8" maxlength="12" onkeypress="return validate(event)">
-						<div class="btns">
-							<button class="btn btn-gray pull-left" ng-click="login()">Regresar</button>
-							<button class="btn btn-success pull-right" ng-click="login()" ng-disabled="login2.$invalid || logining">Entrar</button>
-						</div>
-					</form>
-				</div>
 			</div>
 		</div>
 		<div class="download-app">

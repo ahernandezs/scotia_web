@@ -4,7 +4,6 @@ angular.module('authentication-route', ['ui.router'])
 $stateProvider
 	.state('login', {
 		url: '/login',
-		//templateUrl: 'views/partials/authentication/login.html',
 		templateUrl: 'views/partials/authentication/login.html',
 		controller: 'LoginCtrl'
 	})

@@ -85,6 +85,7 @@
 .menu-movs{
 	padding-top: 15px;
 	background:$bg-color;
+	overflow:hidden;
 	> p{
 		margin: 0;
 		padding:10px;
@@ -118,9 +119,14 @@
 }
 .movs-tools{
 	background:white;
-	padding:10px 0;
 	color: $mgray;
+	padding:10px 0;
+	overflow:hidden;
+	> div:nth-child(2){
+		margin-top: 8px;
+	}
 	input{
+		margin: 0;
 		padding:0 0 0 30px;
 		border:none;
 		background:url("../images/ico-search.png") no-repeat left center, white;
@@ -130,6 +136,7 @@
 		}
 	}
 	a, a:hover {
+		margin-top: 10px;
 		cursor: pointer;
 		color: #2a5db0;
 		font-size: 0.8em;
