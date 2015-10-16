@@ -168,19 +168,21 @@
 		}
 	}
 	.card-security{
-		+ div{
-			clear: both;
-			overflow: hidden;
-		}
 		margin: 30px 0;
+		+ .row{
+			margin: 0;
+			padding-right: 15px;
+		}
 		p{
 			font-size: 0.9em;
 		}
 	}
 	.card-alerts-setup{
+		margin: 0;
 		h3{
 			font-weight: normal;
 			font-size: 1.1em;
+			margin-bottom: 30px;
 		}
 		.row{
 			margin-bottom: 20px;
@@ -207,20 +209,25 @@
 		}
 	}
 	.card-alerts{
+		margin: 0;
+		.row{
+			margin: 0;
+			margin-right: 15px;
+		}
 		h2{
+			clear: both;
 			font-weight: normal;
 			font-size: 1.2em;
 			padding:10px 15px;
 			border-bottom:1px solid $gray;
 		}
 		.btn-default, .btn-success{
-			width: 150px;
+			width: 30%;
 			margin-bottom: 0;
-			margin-right: 15px;
-			padding-left: 10px;
-			padding-right: 10px;
+			margin-right: 5px;
 		}
 		.checkbox-list{
+			margin-top: 30px;
 			p{
 				font-size: 0.9em;
 				vertical-align: middle;
@@ -245,8 +252,12 @@
 		}
 	}
 	.card-max-amount{
-		margin-top: 40px;
+		margin: 40px 0 0;
 		color:$gray;
+		.row{
+			margin: 0;
+			padding-right: 15px;
+		}
 		.min-amount{
 			font-weight: bold;
 			font-size: 1.8em;
@@ -256,9 +267,6 @@
 			font-weight: normal;
 			font-size: 1.8em;
 		}
-		.btn-default{
-			margin-top: 30px;
-		}
 	}
 }
 
@@ -267,6 +275,7 @@
 	background:#f5f5f5;
 	min-height:500px;
 	.setup-card-nav{
+		margin: 0;
 		overflow: hidden;
 		background:url(../images/border-top.gif) repeat-x;
 		li{
@@ -283,6 +292,7 @@
 		}
 	}
 	.setup-card-head{
+		margin: 0;
 		background: white;
 		border-top:1px solid $gray;
 		border-bottom:1px solid $gray;
@@ -315,6 +325,10 @@
 		}
 	}
 	.setup-card-confirm{
+		margin: 0;
+		.row{
+			margin: 0;
+		}
 		&.detail{
 			margin-bottom: 20px;
 		}

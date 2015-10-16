@@ -27,8 +27,23 @@
 			background:url("../images/ico-card.png") no-repeat center center;
 			background-size:18px;
 		}
+		&.ico-arrow-forward{
+			margin-left: 10px;
+			margin-right: 0;
+			width: 0;
+			height: 0;
+			border-top: 5px solid transparent;
+			border-left: 10px solid white;
+			border-bottom: 5px solid transparent;
+		}
+		&.ico-arrow-back{
+			width: 0;
+			height: 0;
+			border-top: 5px solid transparent;
+			border-right: 10px solid white;
+			border-bottom: 5px solid transparent;
+		}
 	}
-
 	&.btn-default{
 		color:$red;
 		background: #FFFFFF;
@@ -36,6 +51,13 @@
 		&:hover, &:focus, &:active{
 			background: #FFFFFF;
 		}
+	}
+	&.btn-select{
+		color:$default-color;
+		background:white;
+		border:1px solid $gray;
+		position: relative;
+		@include border_radius(2px);
 	}
 }
 .btns{

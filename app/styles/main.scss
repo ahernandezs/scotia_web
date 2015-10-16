@@ -51,6 +51,7 @@ input{
 	> .container{
 		background:white;
 		padding: 160px 0 50px;
+		//@include box_shadow_bottom(rgba(0,0,0,0.2));
 	}
 	.left-menu{
 		padding-left: 15px;
